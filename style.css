@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= VARIABLES ================= */
+:root{
+    --bg-color:#181818;
+    --button-color:#4f46e5;
+    --primary-text-color:#f5f5f5;
+    --secondary-text-color:#b5b5b5;
+
+    --bg-task-color:#212121;
+    --bg-taskkk-color:#2c2f36;
+
+    --delete-color:#ef4444;
+    --delete-hover:#dc2626;
+
+    /* padding  */
+    --nav-padding:16px 32px;
+    --section-padding:20px 32px;
+    --padding-s:6px;
+    --padding-m:12px;
+    --padding-l:16px;
+    --padding-xl:20px;
+    --padding-xxl:32px;
+
+    /* border radius  */
+    --border-radius-s:6px;
+    --border-radius-m:12px;
+    --border-radius-l:16px;
+    --border-radius-xl:20px;
+
+    /* shadow */
+    --shadow-soft:0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* ================= BODY ================= */
+body{
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+}
+
+/* ================= LAYOUT ================= */
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    padding: var(--nav-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+nav h1{
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+nav button{
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    border: none;
+    color: var(--primary-text-color);
+    padding: var(--padding-m) var(--padding-xl);
+    cursor: pointer;
+    border-radius: var(--border-radius-m);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav button:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+/* ================= SECTION ================= */
+section{
+    padding: var(--section-padding);
+    display: flex;
+    flex-grow: 1;
+    gap: var(--padding-xxl);
+}
+
+/* ================= TASK COLUMN ================= */
+section .task-column{
+    background-color: var(--bg-task-color);
+    flex-grow: 1;
+    padding: var(--padding-l);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-m);
+    border-radius: var(--border-radius-l);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.35s ease;
+}
+
+section .task-column:hover{
+    transform: translateY(-4px);
+}
+
+section .task-column.hover-over{
+    border: 2px dashed #6366f1;
+    background-color: #252525;
+    transform: scale(1.03);
+}
+
+/* ================= COLUMN HEADING ================= */
+section .task-column .heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .task-column .heading h2{
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+section .task-column .heading span{
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+}
+
+/* ================= TASK CARD ================= */
+section .task-column .task{
+    background-color: var(--bg-taskkk-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-s);
+    cursor: grab;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+
+section .task-column .task:hover{
+    border-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+section .task-column .task p{
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+/* ================= DELETE BUTTON ================= */
+section .task-column .task button{
+    align-self: flex-end;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: none;
+    border-radius: var(--border-radius-s);
+    background-color: var(--delete-color);
+    color: var(--primary-text-color);
+    font-size: 0.75rem;
+    transition: all 0.25s ease;
+}
+
+section .task-column .task button:hover{
+    background-color: var(--delete-hover);
+    transform: scale(1.05);
+}
