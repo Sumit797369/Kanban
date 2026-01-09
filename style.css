@@ -47,7 +47,7 @@ html{
 
 /* ================= BODY ================= */
 body{
-    background-color: var(--bg-color);
+    background-color: rgb(233, 233, 233);
     color: var(--primary-text-color);
 }
 
@@ -66,7 +66,11 @@ nav{
     justify-content: space-between;
     border-bottom: 1px solid #2a2a2a;
 }
-
+nav .left{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
 nav h1{
     font-size: 1.3rem;
     letter-spacing: 0.5px;
@@ -98,7 +102,7 @@ section{
 
 /* ================= TASK COLUMN ================= */
 section .task-column{
-    background-color: var(--bg-task-color);
+    background-color: rgba(25, 25, 25, 0.642);
     flex-grow: 1;
     padding: var(--padding-l);
     display: flex;
@@ -114,7 +118,7 @@ section .task-column:hover{
 }
 
 section .task-column.hover-over{
-    border: 2px dashed #6366f1;
+    border: 2px dashed #4862f5;
     background-color: #252525;
     transform: scale(1.03);
 }
@@ -138,7 +142,7 @@ section .task-column .heading span{
 
 /* ================= TASK CARD ================= */
 section .task-column .task{
-    background-color: var(--bg-taskkk-color);
+    background-color: rgba(0, 0, 0, 0.789);
     padding: var(--padding-m);
     border-radius: var(--border-radius-m);
     display: flex;
@@ -150,7 +154,7 @@ section .task-column .task{
 }
 
 section .task-column .task:hover{
-    border-color: #4f46e5;
+    border-color: #fb0000;
     transform: translateY(-2px);
 }
 
